@@ -1,11 +1,10 @@
 package dio.web.api.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class WelcomeController {
-    @GetMapping("/exemplo")
+    @GetMapping
     public String welcome() {
         return "Welcome to My Spring Web API";
     }
