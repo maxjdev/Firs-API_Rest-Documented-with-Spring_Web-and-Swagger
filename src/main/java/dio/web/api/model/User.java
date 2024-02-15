@@ -2,10 +2,7 @@ package dio.web.api.model;
 
 import lombok.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@ToString
+@Getter @Setter @NoArgsConstructor @ToString
 public class User {
     private Integer id;
     private String login;
