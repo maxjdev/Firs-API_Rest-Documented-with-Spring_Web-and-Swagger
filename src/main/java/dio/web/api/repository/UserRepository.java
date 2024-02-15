@@ -1,5 +1,6 @@
 package dio.web.api.repository;
 
+import dio.web.api.handler.BusinessException;
 import dio.web.api.model.User;
 import org.springframework.stereotype.Repository;
 
@@ -8,6 +9,8 @@ import java.util.*;
 @Repository
 public class UserRepository {
     public void save(User user) {
+        if (user.getLogin() == null) throw new BusinessException("LOGIN");
+        if (user.getPassword() == null) throw new BusinessException("PASSWORD");
         if(user.getId() == null)
             System.out.println("***SAVE -> RECEIVING USER IN THE REPOSITORY LAYER | RECEBENDO USUARIO NA CAMADA DE REPOSITÓRIO***");
         else
