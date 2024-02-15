@@ -3,8 +3,7 @@ package dio.web.api.repository;
 import dio.web.api.model.User;
 import org.springframework.stereotype.Repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Repository
 public class UserRepository {
@@ -16,7 +15,7 @@ public class UserRepository {
         System.out.println(user);
     }
     public void deleteById(Integer id) {
-        System.out.println(String.format("DELETE/id - RECEIVING ID: %d TO DELETE A USER | RECEBENDO O ID: %d PARA EXCLUIR UM USUARIO", id));
+        System.out.println(String.format("DELETE/id - RECEIVING ID: %d TO DELETE A USER | RECEBENDO O ID: %d PARA EXCLUIR UM USUARIO", id, id));
         System.out.println(id);
     }
     public List<User> findAll() {
@@ -27,11 +26,11 @@ public class UserRepository {
         return users;
     }
     public User findById(Integer id) {
-        System.out.println(String.format("FIND/id - RECEIVING ID: %d TO FIND A USER | RECEBENDO O ID: %d PARA LOCALIZAR UM USUARIO", id));
+        System.out.println(String.format("FIND/id - RECEIVING ID: %d TO FIND A USER | RECEBENDO O ID: %d PARA LOCALIZAR UM USUARIO", id, id));
         return new User("1UserName1", "1MyP@55w0rD!1");
     }
     public User findByUsername(String username) {
-        System.out.println(String.format("FIND/username - RECEIVING USER: %s TO FIND A USER | RECEBENDO O USUARIO: %s PARA LOCALIZAR UM USUARIO", username));
+        System.out.println(String.format("FIND/username - RECEIVING USER: %s TO FIND A USER | RECEBENDO O USUARIO: %s PARA LOCALIZAR UM USUARIO", username, username));
         return new User("1UserName1", "1MyP@55w0rD!1");
     }
 }
